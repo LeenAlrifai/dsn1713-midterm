@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Sarala:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #1f4936;
+  --color-accent: #264f3c;
+  --color-light: #f7f5ef;
+  --color-dark: #212529;
+  --color-bg-light: #f8f6f1;
+  --navbar-bg: var(--color-primary);
+  --navbar-text: #ffffff;
+  --navbar-hover: #dce5dd;
+  --font-heading: "Merriweather", serif;
+  --font-body: "Sarala", sans-serif;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: white;
+  margin: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.navbar-custom {
+  background-color: var(--navbar-bg) !important;
+  padding: 0.75rem 2rem;
+}
+
+.navbar-custom .navbar-brand {
+  color: var(--navbar-text) !important;
+  font-weight: 400;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar-custom .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-custom .nav-link {
+  color: #d9e6de !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-right: 1rem;
+  transition: color var(--transition-speed);
+}
+
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(217,230,222,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#hero {
+  background: url('../images/hero-bg-img.png') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 6rem;   
+  padding-bottom: 30rem; 
+}
+
+#hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f1f1f;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: #333;
+}
+
+#hero .btn-success {
+  background-color: var(--color-primary, #1f4936);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.btn-success {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: white;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all var(--transition-speed);
+}
+
+.btn-success:hover {
+  background-color: #173929;
+  border-color: #173929;
+  color: white;
+}
+
+#hero .btn-success {
+  font-weight: 600;
+}
+
+#cta .btn-success {
+  background-color: var(--color-primary);
+  border: none;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+}
+
+section:not(#hero):not(#cta) {
+  padding: 50px 0;
+}
+
+#smarter-eating .col-lg-6 img {
+  border: none;
+  border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  #smarter-eating .col-lg-6 img {
+    border: none; 
+    border-radius: 0;
+  }
+}
+
+.accordion-button {
+  color: var(--color-dark);
+  font-weight: 500;
+  border: none;
+  box-shadow: none !important;
+  transition: background-color var(--transition-speed);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e8ede7;
+  color: var(--color-dark);
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.green-divider {
+  border: 0;
+  border-top: 1px solid var(--bs-success);
+  opacity: 1;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#smarter-eating .col-lg-6 img {
+  padding: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  #smarter-eating .col-lg-6 img {
+    padding: 0.5rem; 
+  }
+}
+
+#cta {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../images/cta-bg.png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 1rem;
+}
+
+#cta h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+#cta .btn-success {
+  background-color: var(--color-primary);
+  border: none;
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: #d9e6de;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #d9e6de;
+  margin: 0 0.4rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
